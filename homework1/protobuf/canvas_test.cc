@@ -19,4 +19,15 @@ TEST(Canvas, Serialization) {
   EXPECT_NEAR(3.0, other_canvas.GetPoint(0).z(), 1e-6);
 }
 
+TEST(Canvas, TestLength) {
+    Canvas canvas;
+    canvas.AddPoint(1.0, 2.0, 3.0);
+    canvas.AddPoint(4.0, 5.0, 6.0);
+    canvas.BuildLine();
+    double res;
+    res = canvas.CalLength();
+    EXPECT_NEAR (4.24264069, res, 1e-6)
+    
+}
+
 }  // namespace homework1

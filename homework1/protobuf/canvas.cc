@@ -8,6 +8,28 @@
 namespace homework1 {
 
 using homework1::geometry::Point3D;
+using homework1::geometry::Polyline;
+
+void BuildLine(){
+  Polyline line_;
+  int i = 0;
+  for (const auto& p : polygon_.point()) {
+    i++
+    auto* line_.add_point();
+    point->CopyFrom(p);
+    if (i==2)
+        break;
+  }
+}
+
+double CalLength(){
+  Point3D p1, p2;
+  p1 = line.GetPoint(0);
+  p2 = line.GetPoint(1);
+  double d;
+  d = (p1.x() - p2.x())*(p1.x() - p2.x()) + (p1.y() - p2.y())*(p1.y() - p2.y()) + (p1.y() - p2.y())*(p1.y() - p2.y());
+  return sqrt(d);
+}
 
 void Canvas::Draw() const {
   for (const auto& p : polygon_.point()) {
