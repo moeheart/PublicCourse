@@ -26,3 +26,8 @@ cc_binary(
     ],
 )
 
+cc_binary(
+    name = "convert",
+    srcs = ["convert.cc"],
+)
+
