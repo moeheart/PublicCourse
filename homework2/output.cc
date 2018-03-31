@@ -19,11 +19,11 @@ int main() {
   
   Eigen::Vector3d p = Eigen::Vector3d::Zero();
   fout<<"Range"<<std::endl;
-  for p in pointCloud.points{
+  for (p : pointCloud.points) {
       fout<<setiosflag(ios::fixed)<<setprecision(6)<<sqrt(p(0)*p(0)+p(1)*p(1)+p(2)*p(2))<<std::endl;
   }
   fout<<"Height"<<std::endl;
-  for p in pointCloud.points{
+  for (p : pointCloud.points) {
       fout<<setiosflag(ios::fixed)<<setprecision(6)<<p(2)<<std::endl;
   }
   return 0;
