@@ -18,7 +18,7 @@ cc_binary(
     ],
 )
 
-cc_output(
+cc_binary(
     name = "output",
     srcs = ["output.cc"],
     deps = [
