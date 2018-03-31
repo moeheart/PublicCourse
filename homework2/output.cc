@@ -15,7 +15,7 @@ int main() {
   std::cout << pointcloud.rotation << std::endl;
   std::cout << "Translation: " << std::endl;
   std::cout << pointcloud.translation.transpose() << std::endl;
-  std::ofstream fout("p1.txt");
+  std::ofstream fout("/home/ubuntu/PublicCourse/homework2/p1.txt");
   
   fout<<"Range"<<std::endl;
   for (Eigen::Vector3d p : pointcloud.points) {
