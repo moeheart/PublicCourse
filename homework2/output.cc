@@ -15,14 +15,16 @@ int main() {
   std::cout << pointcloud.rotation << std::endl;
   std::cout << "Translation: " << std::endl;
   std::cout << pointcloud.translation.transpose() << std::endl;
-  ofstream fout("p1.txt");
-  fout<<"Range"<<endl;
+  std::ofstream fout("p1.txt");
+  
+  Eigen::Vector3d p = Eigen::Vector3d::Zero();
+  fout<<"Range"<<std::endl;
   for p in pointCloud.points{
-      fout<<setiosflag(ios::fixed)<<setprecision(6)<<sqrt(p(0)*p(0)+p(1)*p(1)+p(2)*p(2))<<endl;
+      fout<<setiosflag(ios::fixed)<<setprecision(6)<<sqrt(p(0)*p(0)+p(1)*p(1)+p(2)*p(2))<<std::endl;
   }
-  fout<<"Height"<<endl;
+  fout<<"Height"<<std::endl;
   for p in pointCloud.points{
-      fout<<setiosflag(ios::fixed)<<setprecision(6)<<p(2)<<endl;
+      fout<<setiosflag(ios::fixed)<<setprecision(6)<<p(2)<<std::endl;
   }
   return 0;
 }
