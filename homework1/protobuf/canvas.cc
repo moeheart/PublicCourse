@@ -14,7 +14,7 @@ void BuildLine(){
   Polyline line_;
   int i = 0;
   for (const auto& p : polygon_.point()) {
-    i++
+    i++;
     auto* line_.add_point();
     point->CopyFrom(p);
     if (i==2)
