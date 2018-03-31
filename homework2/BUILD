@@ -17,3 +17,12 @@ cc_binary(
         ":pointcloud",
     ],
 )
+
+cc_output(
+    name = "output",
+    srcs = ["output.cc"],
+    deps = [
+        ":pointcloud",
+    ],
+)
+
